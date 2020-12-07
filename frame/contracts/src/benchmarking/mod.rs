@@ -40,7 +40,7 @@ use frame_benchmarking::{benchmarks, account, whitelisted_caller};
 use frame_support::storage::child;
 use frame_system::{Module as System, RawOrigin};
 use parity_wasm::elements::{Instruction, ValueType, BlockType};
-use sp_runtime::traits::{Hash, Bounded};
+use sp_runtime::traits::{Hash, Bounded, Zero};
 use sp_std::{default::Default, convert::{TryInto}, vec::Vec, vec};
 use pallet_contracts_primitives::RentProjection;
 
@@ -253,7 +253,7 @@ where
 	/// Evict this contract.
 	fn evict(&mut self) -> Result<(), &'static str> {
 		self.set_block_num_for_eviction()?;
-		Rent::<T>::collect(&self.contract.account_id);
+		Rent::<T>::snitch_contract_should_be_evicted(&self.contract.account_id, Zero::zero());
 		self.contract.ensure_tombstone()
 	}
 }
