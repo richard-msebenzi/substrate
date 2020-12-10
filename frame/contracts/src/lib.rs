@@ -715,6 +715,11 @@ decl_storage! {
 		///
 		/// TWOX-NOTE: SAFE since `AccountId` is a secure hash.
 		pub ContractInfoOf: map hasher(twox_64_concat) T::AccountId => Option<ContractInfo<T>>;
+		/// Evicted contracts that await child trie deletion.
+		///
+		/// Child trie deletion is a heavy operation depending on the amount of storage items
+		/// stored in said trie. Therefore this operation is performed lazily in `on_initialze`.
+		pub DeletionQueue: Vec<storage::DeletedContract>;
 	}
 }
 
