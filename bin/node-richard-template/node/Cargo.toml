@@ -50,7 +50,7 @@ pallet-transaction-payment-rpc = { version = "2.0.0", path = "../../../frame/tra
 frame-benchmarking = { version = "2.0.0", path = "../../../frame/benchmarking" }
 frame-benchmarking-cli = { version = "2.0.0", path = "../../../utils/frame/benchmarking-cli" }
 
-node-template-runtime = { version = "2.0.0", path = "../runtime" }
+node-template-runtime = { version = "2.0.0", path = "../runtime", package = "node-richard-template-runtime" }
 
 [build-dependencies]
 substrate-build-script-utils = { version = "2.0.0", path = "../../../utils/build-script-utils" }
