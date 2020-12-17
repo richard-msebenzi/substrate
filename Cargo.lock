@@ -3929,6 +3929,7 @@ dependencies = [
  "pallet-nicks",
  "pallet-randomness-collective-flip",
  "pallet-richard-template",
+ "pallet-scheduler",
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-transaction-payment",
