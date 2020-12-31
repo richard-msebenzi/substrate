@@ -20,6 +20,7 @@ pallet-scheduler  = { version = "2.0.0", default-features = false, path = "../..
 pallet-contracts = { version = '2.0.0', default_features = false, path = "../../../frame/contracts" }
 pallet-contracts-primitives = { version = '2.0.0', default_features = false, path = "../../../frame/contracts/common" }
 pallet-contracts-rpc-runtime-api = { version = '0.8.0', default_features = false, path = "../../../frame/contracts/rpc/runtime-api" }
+pallet-node-authorization = { default-features = false, version = '2.0.0', path = "../../../frame/node-authorization" }
 frame-support = { version = "2.0.0", default-features = false, path = "../../../frame/support" }
 pallet-grandpa = { version = "2.0.0", default-features = false, path = "../../../frame/grandpa" }
 pallet-randomness-collective-flip = { version = "2.0.0", default-features = false, path = "../../../frame/randomness-collective-flip" }
@@ -74,6 +75,7 @@ std = [
 	'pallet-contracts/std',
     'pallet-contracts-primitives/std',
     'pallet-contracts-rpc-runtime-api/std',
+    'pallet-node-authorization/std',
 	"serde",
 	"sp-api/std",
 	"sp-block-builder/std",

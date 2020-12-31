@@ -542,6 +542,12 @@ dependencies = [
 
 [[package]]
 name = "bs58"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "476e9cd489f9e121e02ffa6014a8ef220ecb15c05ed23fc34cca13925dc283fb"
+
+[[package]]
+name = "bs58"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "771fe0050b883fcc3ea2359b1a96bcfbc090b7116eae7c3c512c7a083fdf23d3"
@@ -2861,7 +2867,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cc9c96d3a606a696a3a6c0ad3c3352c57bda2082ec9090930f1bd9daf787039f"
 dependencies = [
  "asn1_der",
- "bs58",
+ "bs58 0.4.0",
  "bytes 0.5.6",
  "ed25519-dalek",
  "either",
@@ -3880,6 +3886,7 @@ dependencies = [
 name = "node-richard-template"
 version = "2.0.0"
 dependencies = [
+ "bs58 0.3.1",
  "frame-benchmarking",
  "frame-benchmarking-cli",
  "jsonrpc-core",
@@ -3932,6 +3939,7 @@ dependencies = [
  "pallet-contracts-rpc-runtime-api",
  "pallet-grandpa",
  "pallet-nicks",
+ "pallet-node-authorization",
  "pallet-randomness-collective-flip",
  "pallet-richard-template",
  "pallet-scheduler",
@@ -5249,7 +5257,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2f51a30667591b14f96068b2d12f1306d07a41ebd98239d194356d4d9707ac16"
 dependencies = [
  "arrayref",
- "bs58",
+ "bs58 0.4.0",
  "byteorder",
  "data-encoding",
  "multihash",
@@ -7137,7 +7145,7 @@ dependencies = [
  "async-std",
  "async-trait",
  "bitflags",
- "bs58",
+ "bs58 0.4.0",
  "bytes 0.5.6",
  "derive_more",
  "either",
