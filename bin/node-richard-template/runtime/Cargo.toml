@@ -17,6 +17,9 @@ pallet-aura = { version = "2.0.0", default-features = false, path = "../../../fr
 pallet-balances = { version = "2.0.0", default-features = false, path = "../../../frame/balances" }
 pallet-nicks = { version = "2.0.0", default-features = false, path = "../../../frame/nicks" }
 pallet-scheduler  = { version = "2.0.0", default-features = false, path = "../../../frame/scheduler" }
+pallet-contracts = { version = '2.0.0', default_features = false, path = "../../../frame/contracts" }
+pallet-contracts-primitives = { version = '2.0.0', default_features = false, path = "../../../frame/contracts/common" }
+pallet-contracts-rpc-runtime-api = { version = '0.8.0', default_features = false, path = "../../../frame/contracts/rpc/runtime-api" }
 frame-support = { version = "2.0.0", default-features = false, path = "../../../frame/support" }
 pallet-grandpa = { version = "2.0.0", default-features = false, path = "../../../frame/grandpa" }
 pallet-randomness-collective-flip = { version = "2.0.0", default-features = false, path = "../../../frame/randomness-collective-flip" }
@@ -68,6 +71,9 @@ std = [
 	"pallet-timestamp/std",
 	"pallet-transaction-payment/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
+	'pallet-contracts/std',
+    'pallet-contracts-primitives/std',
+    'pallet-contracts-rpc-runtime-api/std',
 	"serde",
 	"sp-api/std",
 	"sp-block-builder/std",
